@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<template-document xmlns="http://www.hsmworks.com/namespace/hsmworks/document/template" version="1.0">
+
+  <localizationDescriptionID id="3"/>
+
+  <user-notes></user-notes>
+
+  <iconID id="0"/>
+
+  <doubleSided value="false"/>
+
+  <holeSignature holeType="legacy" tolerance="0.005000" version="19">
+    <segment filletType="None" heightMatchingType="Geometry" radiusMatchingType="Geometry" segmentId="0" threadMatchingType="Geometry" type="Cylinder">
+      <radius type="Undefined"/>
+      <height type="Undefined"/>
+      <fullHeight type="Undefined"/>
+    </segment>
+    <segment filletType="None" radialChange="Decreasing" segmentId="1" type="Flat">
+      <topRadius type="Undefined"/>
+      <bottomRadius type="Undefined"/>
+    </segment>
+    <segment filletType="None" heightMatchingType="Geometry" radiusMatchingType="Geometry" segmentId="2" threadMatchingType="Geometry" type="Cylinder">
+      <radius type="Undefined"/>
+      <height type="Undefined"/>
+      <fullHeight type="Undefined"/>
+    </segment>
+  </holeSignature>
+
+  <template isFallback="0" localizationID="6" strategy="drill" unit="inches" version="45">
+    <holeData modelAxialClearance="0.000000" modelRadialClearance="0.000000" operationType="spot" version="6">
+      <toolSelection searchTolerance="10.000000" selectionMethod="diameterRatio" toolDiameterRatio="1.000000"/>
+      <holeMapping>
+        <circular_face index="0" segmentId="0"/>
+        <circular_face index="2" segmentId="2"/>
+      </holeMapping>
+    </holeData>
+    <parameter expression="'selection-faces'" name="holeMode"/>
+    <parameter expression="true" name="holeFaces"/>
+    <parameter expression="true" name="mergeHoleSegments"/>
+    <parameter expression="false" name="autoMergeHoleSegments"/>
+    <parameter expression="'from hole top'" name="topHeight_mode"/>
+    <parameter expression="0mm" name="topHeight_offset"/>
+    <parameter expression="'to chamfer width'" name="bottomHeight_mode"/>
+    <parameter expression="0mm" name="toChamferWidth"/>
+    <parameter expression="'drilling'" name="cycleType"/>
+  </template>
+
+  <template isFallback="0" localizationID="7" strategy="drill" unit="inches" version="45">
+    <holeData modelAxialClearance="0.000000" modelRadialClearance="0.000000" operationType="drill" version="6">
+      <toolSelection searchTolerance="0.050000" selectionMethod="diameterRatio" toolDiameterRatio="0.970000"/>
+      <holeMapping>
+        <circular_face index="0" segmentId="0"/>
+        <circular_face index="2" segmentId="2"/>
+      </holeMapping>
+    </holeData>
+    <parameter expression="'selection-faces'" name="holeMode"/>
+    <parameter expression="true" name="holeFaces"/>
+    <parameter expression="true" name="mergeHoleSegments"/>
+    <parameter expression="true" name="autoMergeHoleSegments"/>
+    <parameter expression="true" name="drillTipThroughBottom"/>
+    <parameter expression="0mm" name="breakThroughDepth"/>
+    <parameter expression="'from hole top'" name="topHeight_mode"/>
+    <parameter expression="0mm" name="topHeight_offset"/>
+    <parameter expression="'from hole bottom'" name="bottomHeight_mode"/>
+    <parameter expression="0mm" name="bottomHeight_offset"/>
+    <parameter expression="'chip-breaking'" name="cycleType"/>
+  </template>
+
+  <template isFallback="0" localizationID="8" strategy="bore" unit="inches" version="45">
+    <holeData modelAxialClearance="0.000000" modelRadialClearance="0.000000" operationType="flatEndMill" version="6">
+      <toolSelection maximumDiameterRatio="0.950000" minimumDiameterRatio="0.750000" selectionMethod="minMaxDiameterRatio"/>
+      <holeMapping>
+        <circular_face index="0" segmentId="0"/>
+      </holeMapping>
+    </holeData>
+    <parameter expression="true" name="circularFaces"/>
+    <parameter expression="'from hole top'" name="topHeight_mode"/>
+    <parameter expression="0mm" name="topHeight_offset"/>
+    <parameter expression="'from hole bottom'" name="bottomHeight_mode"/>
+    <parameter expression="0mm" name="bottomHeight_offset"/>
+  </template>
+
+  <template isFallback="0" localizationID="9" strategy="drill" unit="inches" version="45">
+    <holeData modelAxialClearance="0.000000" modelRadialClearance="0.000000" operationType="boringBar" version="6">
+      <toolSelection searchTolerance="0.050000" selectionMethod="diameterRatio" toolDiameterRatio="1.000000"/>
+      <holeMapping>
+        <circular_face index="0" segmentId="0"/>
+        <circular_face index="2" segmentId="2"/>
+      </holeMapping>
+    </holeData>
+    <parameter expression="'selection-faces'" name="holeMode"/>
+    <parameter expression="true" name="holeFaces"/>
+    <parameter expression="true" name="mergeHoleSegments"/>
+    <parameter expression="true" name="autoMergeHoleSegments"/>
+    <parameter expression="true" name="drillTipThroughBottom"/>
+    <parameter expression="0mm" name="breakThroughDepth"/>
+    <parameter expression="'from hole top'" name="topHeight_mode"/>
+    <parameter expression="0mm" name="topHeight_offset"/>
+    <parameter expression="'from hole bottom'" name="bottomHeight_mode"/>
+    <parameter expression="0mm" name="bottomHeight_offset"/>
+    <parameter expression="'boring'" name="cycleType"/>
+  </template>
+
+</template-document>
